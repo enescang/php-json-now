@@ -1,10 +1,10 @@
 <?php
 
-interface Nerd{
+interface JsonNowInterface{
     public function config(array $arr);
 }
 
-class JSONX implements Nerd
+class JSONX implements JsonNowInterface
 {
     public static $size;
     public $JS;

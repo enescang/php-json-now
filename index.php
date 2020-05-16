@@ -1,6 +1,6 @@
 <?php
 //header('Content-Type: application/json');
-require('JsonNerd.php');
+require('JsonNow.php');
 $conf=[
     'prop'=>[
         'id',
