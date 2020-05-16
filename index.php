@@ -15,5 +15,6 @@ $conf=[
     
 ];
 
-$t = JSONX::size(100)->config($conf)->json();
-echo $t;
+$example1 = JSONX::size(100)->config($conf)->json();
+$example2 = JSONX::size(100)->addProp('id', 'age')->json();
+echo $example2;

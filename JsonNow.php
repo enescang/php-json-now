@@ -2,6 +2,8 @@
 
 interface JsonNowInterface{
     public function config(array $arr);
+    public function addProp(...$str);
+
 }
 
 class JSONX implements JsonNowInterface
@@ -20,15 +22,10 @@ class JSONX implements JsonNowInterface
         return new self;
     }
 
-    public function name()
-    {
-        array_push($this->prop, 'name');
-        return $this;
-    }
-
-    public function id()
-    {
-        array_push($this->prop, 'id');
+    public function addProp(...$prop){
+        foreach((array)$prop as $key=>$value){
+            array_push($this->prop, $value);
+        }
         return $this;
     }
 
